@@ -1,118 +1,494 @@
 <!DOCTYPE html>
-<html lang="zxx">
-  <!-- Mirrored from pxdraft.com/themeforest/weasley/weasley/index-02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 11:50:04 GMT -->
-  <head>
-    <!-- metas -->
-    <meta charset="utf-8" />
-    <meta name="author" content="themepaa" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn.freebiesupply.com/logos/large/2x/terraform-enterprise-logo-png-transparent.png"
     />
-    <meta name="keywords" content="Weasley - Portfolio Template" />
-    <meta name="description" content="Weasley - Portfolio Template" />
-    <!-- title -->
-    <title>Terraform | G4</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="terraform_black.png" />
-    <!-- theme css -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-  </head>
-  <!-- Body Start -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+        
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
 
-  <body class="dark-bg">
-    <!-- page loading -->
-    <div id="loading">
-      <div class="load-circle"><span class="one"></span></div>
-    </div>
-    <!-- End -->
-    <!-- Header -->
-    <header class="main-header">
-      <nav
-        class="navbar header-nav header-white header-transparent navbar-expand-lg one-page-nav"
-      >
-        <div class="container">
-          <!-- Brand -->
-          <a class="navbar-brand" href="#">
-            <img
-              width="70"
-              src="assets/img/logo-sonatel.jfif"
-              title=""
-              alt=""
-            />
-          </a>
-          <!-- / -->
-          <!-- Mobile Toggle -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbar-collapse-toggle"
-            aria-controls="navbar-collapse-toggle"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <!-- / -->
-          <!-- Top Menu -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbar-collapse-toggle"
-          >
-            <ul class="navbar-nav ml-auto">
-              <li>
-                <a class="nav-link" data-scroll-nav="0" href="#home"
-                  ><span>Terraform</span></a
-                >
-              </li>
-              <li>
-                <a class="nav-link" data-scroll-nav="1" href="#fonctionnement"
-                  ><span>Fonctionnement</span></a
-                >
-              </li>
-              <li>
-                <a class="nav-link" data-scroll-nav="2" href="#documentation"
-                  ><span>Documentation</span></a
-                >
-              </li>
-            </ul>
-          </div>
-          <!-- / -->
-        </div>
-        <!-- Container -->
-      </nav>
-      <!-- Navbar -->
-    </header>
-    <!-- End Header -->
-    <!-- Main -->
-    <main class="wrapper">
-      <!-- Home Section -->
-      <section data-scroll-index="0" class="home-section-02">
-        <div class="container">
-          <div class="row min-vh-100 align-items-center">
-            <div class="col-left">
-              <div class="home-image">
-                <div class="home-image-in">
-                  <img src="assets/img/terraform.png" title="" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-right">
-              <div class="home-intro">
-                <h2>
-                  <span class="text-theme"
-                    >Qu'est-ce que Terraform ?<span
-                      class="text-theme"
-                      id="type-it"
-                    ></span
-                  ></span>
-                </h2>
-                <p>
-                  HashiCorp Terraform est un outil d'infrastructure en tant que
+p{
+    font-weight: 300;
+    color: #111;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+.logo span{
+    color: #fb911f;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+
+header .navbar li a:hover{
+    color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+}
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/60f08016-baa6-4e04-b6cc-a921d6425701.jfif);
+    background-size: cover;
+}
+
+.banniere .contenu{
+    max-width: 70%;
+    text-align: center;
+}
+.banniere .contenu h2{
+    color: #fff;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+.contenu p:nth-child(2){
+    color: #ffff;
+    font-size: 1.2em;
+}
+
+.btn1{
+    font-size: 1em;
+    color: #fff;
+    background: #fb911f;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+.btn2{
+    font-size: 1em;
+    color: #fff;
+    background: #2a4963;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.btn1:hover{
+letter-spacing: 4px;
+}
+section{
+    padding: 100px;
+}
+.row{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50{
+    position: relative;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row .col50 h2{
+    margin-bottom: 20px;
+}
+
+.titre-texte{
+    color: #000;
+    font-size: 2em;
+    font-weight: 300px;
+    text-transform: capitalize;
+}
+
+.titre-texte span{
+    color: #fb911f;
+    font-size: 1.5em;
+    font-weight: 700px;
+}
+
+.row .col50 img{
+    height: 450px;
+    width: 600px;
+    position: relative;
+}
+
+.titre{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.catalogue{
+    margin-top: -100px;
+}
+
+.catalogue .contenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.catalogue .contenu .box{
+    width: 400px;
+    margin: 10px;
+    border: 10px solid #fff;
+    box-shadow: 10px 5px 15px rgba(0,0,0, 0.8);
+}
+
+.catalogue .contenu .box .imbox{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.catalogue .contenu .box .imbox img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.catalogue .contenu .box .text{
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+}
+
+.catalogue .contenu .box .text h3{
+    font-weight: 400;
+}
+
+.blanc .titre-texte{
+    color: #fff;
+}
+
+.blanc .titre-texte,
+.blanc p{
+    color: #fff;
+}
+
+.contact{
+    background-image: url(./images/de0994f7-261e-43c8-af84-22fb90ed3c6b.jfif);
+    background-size: cover;
+    box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+    width: 100%;
+    background-position: unset;
+}
+.contactform{
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
+    max-width: 500px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 38%;
+}
+
+.contactform .inputboite{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactform h3{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contactform .inputboite input,
+.contactform .inputboite textarea{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.contactform .inputboite input[type="submit"]{
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffff;
+    background: #fb911f;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    max-width: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright{
+    padding: 20px 40px;
+    border-top: 2px solid rgba(0,0,0, 0.1);
+    background: rgba(228,222,222,);
+    text-align: center;
+}
+
+.copyright p:nth-child(1){
+    color: #333;
+}
+
+.copyright a {
+    color: #fb911f;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.contact .titre-text span{
+    color: #fb911f;
+    font-size: 2em;
+}
+
+header.sticky{
+    background: #fff;
+    padding: 10px 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
+}
+
+header.sticky .logo{
+    color: #000;
+}
+
+header.sticky .navbar li a {
+    color: #000;
+}
+
+header.sticky li a:hover{
+    color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+}
+
+@media (max-width: 991px) {
+header, 
+header.sticky{
+    padding: 10px 20px;
+}
+
+header .navbar li{
+    margin-left: 0px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.navbar{
+    display: none;
+}
+section{
+    padding: 20px;
+}
+
+header .navbar.active{
+    width: 100%;
+    height: calc(100% -68px);
+    position: fixed;
+    top: 68px;
+    left:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffff;
+    align-items: center;
+}
+
+.menuToggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(./images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-size: 30px;
+}
+
+.menuToggle.active
+{
+    background-image: url(./images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-origin: center;
+}
+
+header.sticky .menuToggle{
+    filter: invert(1);
+}
+
+
+.banniere .contenu h2{
+    font-size: 2em;
+}
+
+.row .col50 img{
+    margin-left: 18%;
+}
+
+.contenu p:nth-child(2){
+    font-size: 1.2em;
+}
+.expert{
+    margin-top: 0px;
+}
+
+.menu{
+    margin-top: 0px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.temoignage h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+.temoignage p{
+text-align: center;
+}
+
+.contactform{
+    margin-left: 25%;
+}
+
+
+    .row .col50 {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    
+    }
+
+    .row{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px)
+{
+    .banniere .contenu h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+
+    .titre-text{
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignage h2 
+    {
+        font-size: 1.1em;
+    }
+
+    .temoignage p{
+        text-align: center;
+    }
+}
+    </style>
+    <title>Terraform | G4</title>
+<body>
+<header>
+    <a href="#" class="logo"><img  width="70"
+        src="data:image/jpeg;base64,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" alt=""></a>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <ul style="color: black;" class="navbar">
+        <li><a href="#terraform" onclick="toggleMenu();">Terraform</a></li>
+        <li><a href="#fonctionnement" onclick="toggleMenu();">Fonctionnement</a></li>
+        <li><a href="#documentation" onclick="toggleMenu();">Documentation</a></li>
+    </ul>
+</header>
+<section class="apropos" id="terraform">
+    <div class="row">
+        <div class="col50">
+            <h2 class="titre-texte"><span>Qu'est-ce que Terraform ?</span></h2>
+            <p>
+
+
+                HashiCorp Terraform est un outil d'infrastructure en tant que
                   code qui vous permet de définir à la fois des ressources cloud
                   et sur site dans des fichiers de configuration lisibles par
                   l'homme que vous pouvez versionner, réutiliser et partager.
@@ -121,40 +497,24 @@
                   au long de son cycle de vie. Terraform peut gérer des
                   composants de bas niveau comme les ressources de calcul, de
                   stockage et de mise en réseau, ainsi que des composants de
-                  haut niveau comme les entrées DNS et les fonctionnalités SaaS.
-                </p>
-                <div class="btn-bar">
-                  <a class="px-btn px-btn-primary" href="#"
-                    >Browse Resume <i class="bi bi-arrow-up-right"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-          </div>
+                  haut niveau comme les entrées DNS et les fonctionnalités SaaS.         
+        </p>
         </div>
-      </section>
-      <!-- End Home Section -->
-      <!-- About Section -->
-      <section
-        data-scroll-index="1"
-        class="section fonctionnement-section-02 border-top-g"
-      >
-        <div class="container">
-          <div class="row section-heading-02">
-            <div class="col-lg-6">
-              <h3><span>Comment fonctionne Terraform ?</span></h3>
+        <div class="col50">
+            <div class="img">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/terraform-enterprise-logo-png-transparent.png" alt="image">
             </div>
-          </div>
-          <div class="row align-items-center gy-4">
-            <div class="col-lg-6">
-              <div class="about-me-img">
-                <img src="assets/img/arch.png" title="" alt="" height="500" />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="about-me ps-lg-5">
-                <p>
-                  Terraform crée et gère des ressources sur des plates-formes
+        </div>
+    </div>
+</section>
+<section class="catalogue" id="fonctionnement">
+    <div class="row">
+        <div class="col50">
+            <h2 class="titre-texte"><span>Comment fonctionne Terraform ?</span></h2>
+            <p>
+
+
+                Terraform crée et gère des ressources sur des plates-formes
                   cloud et d'autres services via leurs interfaces de
                   programmation d'applications (API). Les fournisseurs
                   permettent à Terraform de fonctionner avec pratiquement
@@ -175,109 +535,88 @@
                   <strong>Appliquer : </strong>après approbation, Terraform
                   exécute les opérations proposées dans le bon ordre, en
                   respectant toutes les dépendances de ressources. Par exemple,
-                  si vous mettez à
-                </p>
-              </div>
-            </div>
-          </div>
+                  si vous mettez à       
+        </p>
         </div>
-      </section>
-      <!-- End About Section -->
-      <!-- Services Section -->
-      <section
-        data-scroll-index="2"
-        class="section documentation-section border-top-g"
-      >
-        <div class="container">
-          <div class="row section-heading-02">
-            <div class="col-md-12">
-              <div class="section-title">
-                <h3><span>Documentation</span></h3>
-              </div>
+        <div class="col50">
+            <div class="img">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAACUCAMAAAD70yGHAAAB4FBMVEX///8NgLkAAABfQ+ne6vXm5+eMq8z5+PZ4pdHR4fHZ3uGZs8+Frtj5+fnd3d1AQLIANm1mkKzv7+/b4uiTq7zW1tYAebT83ML3lyoea5X09PTLy8sWaZYAABi8vLwAf//Q0NIYGiV4eIGZmZ0vMDUAef9SMOlFRUVcg57f2vqrq6tUVVyioqL39v5WNuk5OkOfkPPRy/hVVb2IiIjJwve2trZsUu9mZmZ1dXVSUlLp5P9kZcIuLi71gAB5eXkjIyM5OTkHBxU6j8Fop82/0Nr2igD6vYIAWdkWFhYoKChRmscAXYxwkqaqu8VaWFiApLm+3P/95d8pkP9vr/9Jnv/+8OLO4v8AdP+hy//3nD74pFCRwv+x1P8ATXmduvP/zDpxm+lfkOkAUNmjvO5lgZL2jXX2eVrxNgD6xrr81s06dZXzThj2gmZRi8KgusrzXjP1bEeJdfP70av5rmezp/VImv/6wo17ZfCFhcwoKK6dndY3N7D5t3Jeqf+klvQciP/At/d7t/+4uOAAK2cAP3GGdLXhrKPZMhDbWEr457dLeNDLWVDaRDXArX7kysjbRTj/4ZbWeHHplY/91m4acOEAYd3/8M3nyI3/13P0vDTgbC7/xxvxoyfWJSTWIAAAQ9qN+3tyAAAVN0lEQVR4nO2di2Pbxn3HrzCvnLQBLo+EJeNiGAosg4FAKRmCgHQpkk4pmUr4iiwxskXLeqTN7CRaI8VK0lhV3CZp43nJutrZss3bv7o7kKJIECAh8SHFxTcOiffjo9/97nc/HI4A+PLly5cvX75+0kLhbFhoXUSWhFkPu3rZ5m9Q4VIoHylE8tFSuL4EbYdCESLyGe64KwC//s2gL++nIYRg81woIiEhyLKsMFrKI7ooki9AJJAlQSTla4vc9Ov3/8m31XAklC9FmqwyG+LREZXR+1kQjmZh8GiP0WjB/XAfEqYf/taaNIomz6bMFB83VUPidPJtaDxxD3EMxHhcgnFTH8QdnbqyoZJEbDAYFNBoxIKVzcMWQwvmI3mu1bsGSxG341lM3//gN+RvICqcqLNpnhMTHNLVDI/JdxEDgBkTyLqUxBmOG8xdnapIQeearBIVomEUgrbCW4jamBKVXGy1xvTeO+8TWzUxq6l8UklJOcXQGRngBVM0CVRTTLKyqSoSo2h9vZ1Aj+rLRYSjvM09ovx9LmhfZKdMFRp1POI9YqP37oEPP7gHgK4DgyHWiHARsrqeFHCCRwQqy5g5Q4srIqfAjt75uBr56Oc96SPY/RwOInFSYXv7MFYKO5hgNmK/z5IUtG9EjxRyroyIjQaprZJJIZHJ6EIuo4hMRtdFIyEWASjmMnKRMxRZ4zISkyme6DZcNPL3wZ70D86G0lFCJFSKFESMSawU2iY4Q3ajBBShHRZytqaS5HyWdz745+A79452JRED/Z8cVaAftUlgTYLadN9EoPa0//Ghhkt5UiMFrbsggRGpoPK4zU6JpbYjDJTLlZjD8VxO9M4Hvz3utfVJQ4cayUuo5ZTB0XzJi52sLk4SXV4q21dEJZc9Du106BoyVBgttNc2bPZ+13piZHHyck2TN22rQvno9rEuYuAaLlRSIznig91stUKRTh4cXCbfk0ut6yJcsBA9gWsfnIYK1amWr6lbRXFAWZYDscAqnXrUulKg4dZZMtZ2qLGPrx1j/+NAZR2YBsfGdsaWu+25OtkgGVgkVB2iY/e21fDlAPWNq6+217FuOg7UvGRnujM+O3fr1vjc7G5HrjFino0yHyCAVx02cmtbnYKcoJ6bPveJ17jtGFDbwvmxufEdC2Zw+eHsbgc3RDzqZKUxt3/58gOHjdjoydohA5Aj1HPnpt943dv+x4Aa4lr/UnuzO0czy7fn3I115d3Jg6N9VyYvHzj9zcN5z5cyYLlAPXfu6qeveNnfO9SwzVDnbRT3Zl2p0qj/aK5KoDr6p9BZMVVXqOemX73WVmP9oW1/71Bt7c6dNoZ7c94CEVJrLTquyJ6VuqoT1NeuftKy5tovz7ft7x1qqMVQg7NjbVvc3l3uUF/F9veXLHsl1f++8ybR3sJDm1hkl9eKpiPU6WbXGvjs8y/+sW1/z1DDpZaqf/52+ybLs3Nzs7d22leAldUAiE1OvkuhEpc6WXU+R6ifCTy2eMmm64rH43eGSlzrx3XX+rsvvjh/vgeo2ULL39nBUIn5BoPLO3O32s118d3yIdQV0rQ6cDlHqS1/b8TNFCaAIE2YsrJp6rzH6wVwYlRoEYITkrddnaBON0ElWGnU+ofzBGlPULePwsjgzu1x6j+XHz5cDs63hagP22usR/sr5er+/v7KCk0BNIVXrYrYLoZNMESQM+nXggZk+q16ulykmxMvtyjFgyuSp32dmqmx309PN0E9N3312mefnz/fK9Ts4dTO3PieFZ/emt+7ffvh3px9U6ca6+a71DyXrBSAS+Enlmq7GJVCxJCpKw4o5JynMizPyDbFFbYHqKRG+vhqE9RzV0kN1TPU7KGlHoWnt24T3dqdbdv21nzbov1DqJMHbnbaHlNRC81YJGvC2PrsfrEs/7LJ8c2CQJzpDSoAr3063VeoLDpsRY5ZhZs298f29vbGxub32mum5XYHEKiMkM/9gyVXMyWK2oywSBDqqMGUSVnTYvernZqYmbnSIobvHSoAX57rH1T6/KSQr51ojjJ8OP9wZ+/h/B6bMuHLpp6CZhyZRWhqOB6nG407hQBEnXMS2Ygtt0AtVeOOoCbAgidLRRM82yqQUPsBFcRee/2qDeoJQ6pIHkMhWDOjMepBg7N7c7uk8I+zsmIkNE2Bchqpui4mZE2hYB7uebv6Vt3nbYGkTusl/giqApK04up6IDTRFkZMGX2BSpOA0y1Qvzh/khYVG6ol+0etm5l/SD/H58f3dm/f3sWmqRZVoyjrCcxoupGQ1QSFOl9zqrFY3TjrFkpn3QPwbClqW4nbLDVNnGz3EH6QUF+59sqnVxtQv/jidw6lrzvUEG72dHUbXCa+lPhVlNKwhiWNI9/Y4FIGL2lsY6vAwdI+e5PO78dW6IIHYH/pQdszqrqEENy2Zf+EtINP9dDBZ5BQX7/6e/ZLEl5ZUD//zLHfRFeokUJL7TFfL9hz87ukTQUR4nkdcjyEmIciFjC0PF6tWTWyT5pSj2L7S9VH1cnyzaXA0soqiC2y+0uB/Zuk1RrYXzyKBNioJLTVVDq1zmQDquUKPGRdKFSxSUI/oU5PT39JolYC9fNfujwO6AY1bOuZt3Or9j27e4tMSZmUqRu6Kpu6Rj5wXNapIdVrfwK18mhptVpZfRBbAqv7q0urxEwXH1XY1f2lMpnbjzVS10KUJ7desJsqAcrGG1A5rZOhHl0ogSpMJRrKcF2g2iPfzlBJtPrpa9c+vvbLdmdalwvURjWct1Ueh9HS2M4emRAMbIgqxqoh8hCLGpmmnZp2d2vX9mDlwciD8v5NAnWxski+AosrN1erj1ZW9x9Vl5ZWb8Ya2WphlJ5SCNnuRiGVvXjI1ApZ3aGWoo0+sMRSBXTYOrUWdYS6fT/bMt8NKm39X+vQzdMF6sVIbRehrQvprkMmxabDrGCsWg2AcmDlETHQSqBcDZRBYIXYarUKylVQLY9UgN3BtoT/UM0QlGaj/GtW28ps7roR/eMvGrpz56t6TUctdeJ6PY3CWNmChIFboeZb97zfjKg7VFpRuQM4goq+OjrLL96+85VVErMR++GDcw/dj2ZprzXZEnv0yG3LdjWVf7FYZ4m02neO1WsT6VQjqwLDRwq9fZhGp5bayPfR0EUQZ8z4jNAMFTXtWbrTmoD3BLXDM4AjqGzTWcJ36gViG7cZ+fL4+Jj7OYNjO7tOCSyPCtdLCOCUhieNg9q00UgCkDjAad+GBVs+daamKXJAbeL6TOLKRGbCJcUVthXH/kFt0aGP2ZYcVu7NzY27aba92X8cCfV2G0o3+OVSIF6HepQFIE6hg6il4rrIDcQZnXoVLn7JY3/rAUE91LZzm3B5zE1duwB0Ub5mblrDJHE9WcUwSR4gtcG1U9dpApXVD1N+snzdALU3XTTG8HQRnePUnqFmh9xxhK1DrfnTtEpaVakj80zKEMD6fKe0KoXaSPmlJmTioA1FJX+e+BVPecOOzdRXr/YKFeX78NhopFIpU4103zRcrxhp4oSRAdIZmxQDIIt4p5JsFf964I9TVwQgTl2/ct3EAHoz1c59qV75+GpvUPvx2DhwsHhg6XJTm87FYg4f2kjEG3KgDallrqLlL7sUf2HqUFfipGV2SRW0S8RiZzx51W4d1F5/Y7onqK5dcr1rfbGug6aHqNlo1mnblqdUCSemRF1fmmgJqRQdcBMKqQNnZhCY6ljBHap7r79PpnuBCvKSl8vooMrB4oM1qq+//rrpWKjk9OdqLhiaC1OG6fbwj1pq+npdV0j49fIEBuJ1aqkve7lkD10pY6/2AlXosYsTu7G4WLVeL/jmT3/6c/OabKitD2FzLxg24wrVKUptFrXURnpan2GBpkxMTUwRd3zd02PDwfdPRc4F1au+fby4IdQK4r88ef5N86rRqH3j5l4wvCvTrilVaqmNxykTE6RyUvUrKfKlT3iykCF0+g2WooXuiWG3ne/+67OKldRA6Lvn3z9vudqsrUtaS0pMdIfKdAmMmoN/LJlWQ4o6a8sDeNAwelJHCoVQPrK9jQC7dtzj/9vduz8PWv1tWCT85cmTf7cduWU21JwSUztA7fLSZGuSmp2aqAVS8iVP1dRQoGZLEAShhEUYe1o5jIqqa8RbxtZtmwY27K8QEqh/jdWhsm1Q2WizWy21vCYkcO7qWvw1o1kzExOmPnXpkjc7HQrU6OH7KJXNdfCsnqtfewqqz2JVsFatrAW21tjKGiivBdbW157antncvXv3B+u1NCSQ4v/EdrXND1C2I33rSqlOtco0zSlT9nz4wUPNHj5P2dq8EatuPq7NrK1V19cDG2vV2Hp5q1pZ3yiPrMc2qmuVddvu3xJTRc4VFaAJlIap9pFprxo81FLd0VU2N9fAsxubtd4Qa5WnVQq1DNZjW1tlMrm1Hnhc3hpZt+//17t3v40RpMI3z5/82b7yKDDNO7ygdVoaPNR8/baf3nhGjfXGM+veK7EKqLAVWvxjYGuL/iuvxQIjYMv+fPEH4gD+g+r7759/13b0ehct0sDq63vQvWngUNl6mLO2ubkFRm7cuLF53AjgPwnVH3/88b++f/KX9pW0ixabzUfcXtA6FTVDzaWbkzCs0tqaw7m0QyTiFWrgxo2ngPoAgrVmi+tehwpY/m9K9X+eP//fd9pXZkuFfL7Aee7kPBS1WGpC0NOqwWhMRl1IqIyYYMhcismZjAjYJMAGz+S4IiMuKI178FD8Lagbm5tWvV8lVDesE6+vg621ShXQ6r+61qmX1PIPRPe++86BKQhHCdGzZKVUrVAhU0yLMkgCKOZAUdJBxpCRwumGDJBCB3LhJNmEspJr9Jzz6FOr/7e5UZslbtXCu771lI09DmyQibXKxvrWCa8/W+hrP//+qAWqAhXZMHSQBkmdYRWU1k1VhgSqSsJeUy/KarwoFqFhyo1aoTtU6wHnSIAOVhCoVLfWbmxukrqKfVxdr66XA49HNrYqlfUR7+8Y2o6e7XvBRxxsGcfp+GPWtEDFLDIQJO1eADGmnwaAHIsFDlotX2z9LwnWVF0eOqgdvjMSoxn8ClU5Bkjlz1a3tkYqW5WRALAVf9Yw6qhotxOI669ec2SKBQKQmjbN93+YHlVJyiJt/PMixZCUgQgBFiXMSR4j4SG0qOzdxroLI14SMRZ50cCGYP2JMUvmOazSRSKWyIxI77C9s0YfJJISqUCGFEteU8S0WpSTPGMkdCaV8XaAYSRUXAbkcRcUORUbBtY4TRdZUeA1pEGNE3nIGSoxH0JcglZXtoG4VEOOJ4rcAojzUDX5BFSALmaAApIo4+0Aw4AqHHuIA8gDDhFHpPEsB1geseRboHETizgWshAJAssKtO/rIJqmqo4XTIEBJhaZDM4gOZ2AOZBhGfLpSUMZREEInexJNdsNWaRw1qIpS0MamaIQrd2+kPU0CI2TttsHoczmz0wOpUWBj/6uJ33ksfYVSMOnVCpFC9JJaxb7S1I00X92ciitQrA3eS5/QTQ6OtrDU8A295m1D6d4ciUYxepKICAgLZCAEdHIjfwnsAjwOl9bILC0a3ZOVGHSmj8zGRwYPTGHfOueQikC+1Xzk/aOLMSVIsdk5FRa02SFwQtsEjOyrMjxpK6pmQzKKQkCVeNABipYKcKc6fk110HL/qzO+45Hg/0SoUge989SNANwQgKYYgKZko41MokVoGATYM3EmqhlgKwqgNT9uqkLCkzEkwynK2cGKig4U4XdBkAIcaORaCkbRiicjYTy2b6ZKZGQ0xmYSCm8goo4jjU9lZaSqSQmcVW8iBVZ1s00KfMMACkRgCTMqHENyScfyLb/3fay9ldIasp3DiOsbhLCaCGSL0UKEuxzqg8RsyfNcZYj4TAUkJ7KQMiTyJi0jDmWtDNIGw9wgKev05DWMomdJTInnfh09y/279LrGnXsXSG4DNlZ1+GoNiwb7PMQkg7idG/9UE+o8J07/e9hKpQcGkLhi506stjexvppa/v+xd677bVrNJ/PNlfmQjZU4qLuQ8xnS6fAFGlYZQEUhZTW5yop0tZfqT+CpDEQyVovXWRL1gMRgJydLbAi0lOI8jVRTrGgyCQYrq/jAA8OKmkMQL5AfwWB1Dv1ByLQJfFSOBWmwLR8lKHxKVrv91ODg0pFqp1gU7XjmHhBJMo/ldYohSpIoinGgcfslFcNFqpdbMEeGbDbIemUHpXKJARAqiDzGCX6e+ThQqVNpej2kWsNl0IF79mFfl9Koxu7IfX3yMOGSnxtNh8qRba3tyP5UEQ6NaSD1PChkiIvjEoSluivfpzR1F6POg2oL7x8qAOQD3UA8qEOQD7U/itcut/tl/T6LH4h3fTuGE3v9znyPn1t37kTGu4ZMWkUQqaoMgmcwnqcKy4wIJkWEoxGH869GLp4Z8iWKuWKGlIAA1LYNGEcKyBpZBQ1IUhmf3/d7BS1PWRDpZYKoAIULY30NDD5nMZIiswpiNNyZ+dJW29ih50dRhgAgY7RwQHEAyxwogiwAUSWVbuP0enrb0m1zLGLtl/MxvjAFbrQQS+9iL8vOgSFLvzMXRdflLpiyPKhDkA+1AHIhzoA+VAHIB/qAORDHYB8qAOQD3UAqkO90PTPh9qrQhfeevNX5N+bb/3qZ2/Rz7fe9KH2Kt9SByDfpw5APtQByIc6ALX4VB9qf9RU+9MAwIfaD/mWOgD5PnUA8qEOQD7UAcgV6oWXXnr7vbM5vsaZl2NFRYFSpvYf0fTlTc0JlYZeonr7vfZfl/LlSY6WWmPq2+lJ5ehT/bLfm5ygXvDLfm9ygurbaY9ygvq2z7Q3OUG9857kM+1F+Zfa5NtprxL4dp3KyBC+fPny5ctXq0yG0SELIER02Gc2qQIIWDpGKqAJP5hmOI0sEmACID8D6Fk61kwTMrKSwPGcxBhK0eQYlUlkFB0AMSMKimnEFZWsSPjJaq9KiZlMjo8DReCMNFL4IkjyJkijBEd/3E5MqDqWjCRXxEzS6y+z+UqJelyDJsigVJGBSSFjmgQsAxWCFuBMUdWKSioN6Q8JvEDjGQ5YSACcwFIXynLErQI6yD6dg9bY8JADAoc4CDgW+u+o+fL1ggpqosYCToQmdZ1WncTR98I5v3o6uXQsy3Tw+wSJp0hVr5uMqCyo6ThInvaV/YRVGzlUVbGOTRXkAKfrGjZNBhb98PTEolARNkxDhxoDc9pCSjd0U5dB0a/1TyyZOFAkshonCRoGoiTyGKmCiv3i34OQ6rwcuiz39cLr/wG9C6Ec0lkr9AAAAABJRU5ErkJggg==" alt="">
             </div>
-          </div>
-          <div class="row gy-4">
-            <div class="col-sm-3 col-lg-3">
-              <div class="feature-box-01 media">
-                <div class="icon"><i class="bi bi-file"></i></div>
-                <div class="feature-content col">
-                  <h4>
-                    <a href="assets/Terraform_G4.pdf" download
-                      >Document Team4</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3 col-lg-3">
-              <div class="feature-box-01 media">
-                <div class="icon"><i class="bi bi-file"></i></div>
-                <div class="feature-content col">
-                  <h4>
-                    <a href="assets/présentationTerraform.pptx">PowerPoint</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3 col-lg-3">
-              <div class="feature-box-01 media">
-                <div class="icon"><i class="bi bi-laptop"></i></div>
-                <div class="feature-content col">
-                  <h4><a href="assets/guide_demo.pdf">GUIDE DEMO</a></h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3 col-lg-3">
-              <div class="feature-box-01 media">
-                <div class="icon"><i class="bi bi-columns"></i></div>
-                <div class="feature-content col">
-                  <h4>
-                    <a href="assets/terraform-cheatsheet-1.pdf">CheatSheet</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3 col-lg-3">
-              <div class="feature-box-01 media">
-                <div class="icon">
-                  <i class="bi bi-terraform"
-                    ><img src="assets/img/terraform.png" alt=""
-                  /></i>
-                </div>
-                <div class="feature-content col">
-                  <h4>
-                    <a href="https://developer.hashicorp.com/terraform"
-                      >Aller Plus loin</a
-                    >
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+    </div>
+</section>  
+<section class="contact" id="documentation">
+     <div>
+         <h5 class="titre-text"><span>Documentation</span></h5>
+     </div>
 
-      <!-- Effect -->
-      <div class="right-effects"></div>
-      <div class="left-effects"></div>
-      <!-- End Effect -->
-    </main>
-    <!-- Main -->
-    <!-- Footer -->
-    <footer class="footer white py-2">
-      <div class="center" style="text-align: center">
-        made with &hearts; by Team4 Cohort2 AWS re/Start © 2022 copyright all
-        right reserved
-      </div>
-    </footer>
-    <!-- End Footer -->
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <script src="assets/vendor/appear/jquery.appear.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/vendor/one-page/scrollIt.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/mail_send.js"></script>
-    <!-- end -->
-  </body>
-  <!-- Body End -->
+        <div class="col-sm-3 col-lg-3">
+              <h4>
+                <a href="https://drive.google.com/file/d/1oHu72wVetjFJn-LZM7Ky-w7F2U_BX9M8/view?usp=share_link" download>Document Terraform</a>
+              </h4>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="feature-box-01 media">
+            <div class="icon"><i class="bi bi-file"></i></div>
+            <div class="feature-content col">
+              <h4>
+                <a href="https://docs.google.com/presentation/d/16K6clalbOPMZKR7KDvGTVJg6CI-Si3Oa/edit?usp=share_link&ouid=106106321095083918273&rtpof=true&sd=true">PRESENTATION PowerPoint</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="feature-box-01 media">
+            <div class="icon"><i class="bi bi-laptop"></i></div>
+            <div class="feature-content col">
+              <h4><a href="https://drive.google.com/file/d/1V4ECRFkKAQ7epVV7YweAfFYGgmBnqg0a/view?usp=share_link">FICHIER DEMO</a></h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="feature-box-01 media">
+            <div class="icon"><i class="bi bi-columns"></i></div>
+            <div class="feature-content col">
+              <h4>
+                <a href="https://drive.google.com/file/d/1OejnpfYRYx9Ho4VT5lR86T7LmVw6VpFu/view?usp=share_link">CheatSheet</a>
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="feature-box-01 media">
+            <div class="icon">
+              <i class="bi bi-terraform"
+                ><img src="assets/terraform.png" alt=""
+              /></i>
+            </div>
+            <div class="feature-content col">
+              <h4>
+                <a href="https://developer.hashicorp.com/terraform"
+                  >Aller Plus loin</a
+                >
+              </h4>
+            </div>
+          </div>
+        </div>
+ </section>    
+
+ <div class="copyright">
+     <p> made with &hearts; by Team4 Cohort2 AWS re/Start © 2022 copyright all
+        right reserved</p>
+ </div>
+ <script type="text/javascript">
+     window.addEventListener('scroll', function(){
+         const header =document.querySelector('header');
+         header.classList.toggle("sticky", window.scrollY > 0 );
+     });
+
+     function toggleMenu(){
+         const tmenuToggle = document.querySelector('.menuToggle');
+         const navbar = document.querySelector('.navbar');
+         navbar.classList.toggle('active');
+         menuToggle.classList.toggle('active');
+     }
+ </script>
+</body>
 </html>
